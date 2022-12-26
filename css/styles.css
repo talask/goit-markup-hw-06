@@ -583,13 +583,27 @@ textarea {
     width: 24px;
     height: 24px;
 
+    color: #000000;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    transition-property: background-color, color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:hover,
+.btn-close:focus,
+.btn-close:active {
+    color: var(--white-color);
+    background-color: var(--hero-click-color);
+    border:  none;
 }
 
 .btn-close svg {
     margin: auto;
+    fill: currentColor;
 }
 
 .modal-title {
