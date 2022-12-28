@@ -267,9 +267,16 @@ textarea {
 .form-footer-input {
     outline: none;
     padding: 8px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    color: var(--white-color);
+    background: transparent;
 }
 
-input::placeholder {
+.form-footer-input::placeholder {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em; 
@@ -722,7 +729,7 @@ input::placeholder {
     border: 1.25px solid var(--hero-click-color);
 }
 
-textarea::placeholder {
+.form-group-textarea::placeholder {
     font-family: inherit;
     font-size: 12px;
     line-height: 1.3;
