@@ -659,15 +659,16 @@ textarea {
     margin-bottom: 4px;
 }
 
-.form-group .form-group-label {
+.form-group .form-group-label:not(:last-child) {
     display: block;
     position: relative;
     margin-bottom: 8px;
 }
 
-.form-group .label-textarea {
+.form-group .form-group-label:last-child {
+    display: block;
     margin-bottom: 16px;
-}
+} 
 
 .form-group-input {
     display: block;
