@@ -261,6 +261,8 @@ textarea {
 .form-footer-input {
     outline: none;
     padding: 8px 16px;
+    min-width: 264px;
+    max-height: 40px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -645,23 +647,33 @@ textarea {
 }
 
 .form-group-span {
-    display: inline-block;
-
+    display: block;
+   
     font-size: 12px;
     line-height: 1.3;
     letter-spacing: 0.04em;
     color: var(--modal-label-color);
 }
 
-.form-group-label {
+.form-group .form-group-span {
+    margin-bottom: 4px;
+}
+
+.form-group .form-group-label {
     display: block;
     position: relative;
     margin-bottom: 8px;
 }
 
+.form-group .label-textarea {
+    margin-bottom: 16px;
+}
+
 .form-group-input {
+    display: block;
     outline: none;
     width: 100%;
+    max-height: 40px;
     padding: 11px 38px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -670,6 +682,10 @@ textarea {
 }
 
 .form-group-textarea {
+    min-width: 360px;
+    min-height: 120px;
+    display: block;
+    resize: none;
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -680,9 +696,8 @@ textarea {
 
  .form-group-icon {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 16px;
-
 }
 
 .form-group-textarea:focus,
@@ -694,10 +709,10 @@ textarea {
     fill: var(--logo-web-color); 
 }
 
-.checkbox-label {
+.label-checkbox {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .form-group-checkbox {
@@ -738,6 +753,7 @@ textarea {
 
 .btn-modal {
     min-width: 172px;
+    /* min-height: 56px; */
     padding: 16px 32px;
     background: var(--logo-web-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -746,7 +762,7 @@ textarea {
     font-weight: 500;
     letter-spacing: 0.04em;
     display: block;
-    margin: 24px auto 0 auto;
+    margin: 0 auto;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
